@@ -1,0 +1,52 @@
+
+
+1.Code is present in 2019900004_SRC_CODE folder 
+
+2.use jar files to run and test the application
+
+3.FOllow steps to run jar files and follow the sequence 
+
+--> navigate temial to folder where jar placed 
+
+--> Run CreateIndex.jar with 2 arguments 1.path to wikidump.xml file 2.index folder path 
+
+example : java -jar CreateIndex.jar "/home/vampi/Desktop/IIITH/IRE/project/enwiki-latest-pages-articles26.xml"  "/home/vampi/Desktop/H/"
+here "/home/vampi/Desktop/IIITH/IRE/project/enwiki-latest-pages-articles26.xml" and "/home/vampi/Desktop/H/" are my arguments for wikidump and 
+index folder path 
+
+we will get time required to create index at end with current testing it is approx 55-60 sec
+and size of indexes are 24-25 MB 
+folder provided for index creation we are also creating a meta folder under it which is not index folder so its size needs to be 
+substracted from total folder size
+
+
+
+
+--> create a file which has list of queries say file name is new (it can be anything)
+--> Run SearchQuery.jar with 3 arguments 1.path of index folder (same where we created above)
+					 2.path of file where queries are present 
+					 3.path of output file (no need to create this one just give path file will be created automatically)
+
+
+example : java -jar SearchQuery.jar "/home/vampi/Desktop/H/"  "/home/vampi/Desktop/new"  "/home/vampi/Desktop/output"
+here 3 are arguments are as mentioned above 
+
+we will get required output as list of related documents (currently its not limited it will give all) in file which we provided as arg 3 
+
+test done for this : 
+1. Input file data    :  alluarjun
+                         Kim Hyeon-Woo
+
+
+2.Results            
+
+Time taken to search result for  2  Queries ..-->>0.082secs
+{found related documents to query alluarjun are ---->>>  =[42661250, 42660312], 
+found related documents to query Kim Hyeon-Woo are ---->>>  =[42645839, 42652026, 42573791, 42617474, 42654890, 42567205, 42657122, 42625895, 42621845, 42638296]}
+
+
+---Note : currently search is not accurately ranked so may be you will get result in diffrent rank but all obtained results are relative only
+
+
+
+
