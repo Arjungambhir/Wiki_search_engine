@@ -1,9 +1,18 @@
 package com.iiith.wikisearch.searcher;
 
-import com.iiith.wikisearch.helper.Trimmer;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
 
-import java.io.*;
-import java.util.*;
+import com.iiith.wikisearch.helper.Trimmer;
 /*
  * Arjun Gambhir
  * 
@@ -236,6 +245,11 @@ public class SearchQuery {
 			System.out.println("please enter a query ==>> ");
 			query = input.nextLine();
 			// querylines = input.
+			
+			 for ( int j = 0 ; j < 26 ; j++ ) {
+				 queryTermList.get(j).clear();
+	            }
+			 queryFieldSerachTerms.clear();
 
 			long searchStartTime = System.currentTimeMillis();
 			String[] querySearchTokens = query.split(" ");
