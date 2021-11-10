@@ -14,7 +14,7 @@ package com.iiith.wikisearch.helper;
 
 import java.io.*;
 
-// hey this is my stemmer class 
+// this is a lib 
 
 
 
