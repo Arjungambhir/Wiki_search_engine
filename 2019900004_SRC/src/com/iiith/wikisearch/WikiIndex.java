@@ -3,7 +3,11 @@ package com.iiith.wikisearch;
 import com.iiith.wikisearch.parser.WikiParserHandler;
 
 /*
- * Arjun Gambhir
+
+Arjun Gambhir
+restricted code
+
+ * 
  * 
 */
 
