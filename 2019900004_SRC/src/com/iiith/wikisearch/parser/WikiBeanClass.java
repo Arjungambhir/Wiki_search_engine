@@ -1,7 +1,8 @@
 package com.iiith.wikisearch.parser;
 
 /*
- * Arjun Gambhir
+ * Arjun Gambhir 
+copyright prohabited 
  * 
 */
 
